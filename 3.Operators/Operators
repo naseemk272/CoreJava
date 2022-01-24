@@ -1,0 +1,129 @@
+Operators
+->Operator in Java is a symbol that is used to perform operations. eg. + , - , * , /
+->Operator are the special symbol which performs any operation on one or more operands.
+There are many types of operators
+1) Arithmatic Operators
+2) Relational Operators
+3) Bitwise Operators
+4) Logical Operators
+5) Assignment Operators
+6) Unary Operator
+7) Miscellaneous Operators
+
+Arithmatic Operators
+-> Java arithmatic operators are used to perform addition, substraction, multiplication and division.
+-> They act as basic methamatical operations.
+
+eg.
+
+class OperatorExample
+{  
+	public static void main(String args[]){  
+		int a=10;  
+		int b=5;  
+		System.out.println(a+b);//15  
+		System.out.println(a-b);//5  
+		System.out.println(a*b);//50  
+		System.out.println(a/b);//2  
+		System.out.println(a%b);//0  
+
+		System.out.println(10*10/5+3-1*4/2);//21
+	}
+}
+
+Unary Operator
+->The Java unary operators require only one operand. Unary operators are used to perform various operations i.e.:
+
+	a) incrementing/decrementing a value by one
+	b) negating an expression
+	c) inverting the value of a boolean
+
+eg
+class OperatorExample
+{  
+	public static void main(String args[]){  
+		int x=10;  
+		System.out.println(x++);//10 (11)  It increases its value by 1 but display 10 
+		System.out.println(++x);//12  	   It increases its value by 1 and display the incremented value
+		System.out.println(x--);//12 (11)  same us above but decreases
+		System.out.println(--x);//10  
+	}
+}
+
+
+Bitwise Operators and Bitwise Operator
+-> The logical && operator doesn't check the second condition if the first condition is false. It checks the second condition only if the first one is true.
+
+-> The bitwise & operator always checks both conditions whether first condition is true or false.
+
+public class OperatorExample
+{  
+	public static void main(String args[]){  
+		int a=10;  
+		int b=5;  
+		int c=20;  
+		System.out.println(a<b&&a<c);	//false && true = false  
+		System.out.println(a<b&a<c);	//false & true = false  
+	}
+}
+Java AND Operator Example: Logical && vs Bitwise &
+
+public class OperatorExample
+{  
+	public static void main(String args[])
+	{  
+		int a=10;  
+		int b=5;  
+		int c=20;  
+		System.out.println(a<b&&a++<c);		//false && true = false  a's value will remain a=10
+		System.out.println(a);				//10 because second condition is not checked  
+		System.out.println(a<b&a++<c);		//false && true = false  
+		System.out.println(a);				//11 because second condition is checked  
+	}
+}
+
+Java OR Operator Example: Logical || and Bitwise |
+
+-> The logical || operator doesn't check the second condition if the first condition is true. It checks the second condition only if the first one is false.
+
+-> The bitwise | operator always checks both conditions whether first condition is true or false.
+
+class OperatorExample
+{  
+	public static void main(String args[]){  
+		int a=10;  
+		int b=5;  
+		int c=20;  
+		System.out.println(a>b||a<c);		//true || true = true  
+		System.out.println(a>b|a<c);		//true | true = true  
+		//|| vs |  
+		System.out.println(a>b||a++<c);		//true || true = true  
+		System.out.println(a);				//10 because second condition is not checked  
+		System.out.println(a>b|a++<c);		//true | true = true  
+		System.out.println(a);				//11 because second condition is checked  
+	}
+}
+
+Java Assignment Operator
+-> Java assignment operator is one of the most common operators. It is used to assign the value on its right to the operand on its left.
+
+class OperatorExample
+{
+	public static void main(String args[]){
+		int a=10;  
+		int b=20;
+		
+		short x=10;  
+		short y=10;
+
+		a+=4;			//a=a+4 (a=10+4)  
+		b-=4;			//b=b-4 (b=20-4)  
+
+		x=(short)(x+y);	//20 which is int now converted to short works only int
+
+		System.out.println(x);
+		System.out.println(a);  
+		System.out.println(b);
+	}
+}
+
